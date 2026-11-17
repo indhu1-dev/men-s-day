@@ -31,7 +31,7 @@
           <h1>Men's Day<br><span>Fastest Finger</span><br>Challenge<span class="title-period">.</span></h1>
           <p class="hero-intro">Ten questions. One running clock. One quick mind at a time.</p>
           <div class="hero-actions"><button class="button button-blue" id="start-button"><i data-lucide="play"></i> Start the challenge</button><button class="text-button" data-view="leaderboard">See the leaderboard <i data-lucide="arrow-up-right"></i></button></div>
-          <div class="quick-facts"><div><strong>10</strong><span>questions</span></div><div><strong>One clock</strong><span>for the full round</span></div><div><strong>100</strong><span>points to win</span></div></div>
+          <div class="quick-facts"><div><strong>10</strong><span>questions</span></div><div><strong>One clock</strong><span>starts when you do</span></div><div><strong>Top 10</strong><span>fastest high scores</span></div></div>
         </div>
         <div class="hero-art" aria-label="Men's Day quiz illustration">
           <div class="art-kicker">THINK FAST.<br>SHOW UP.</div>
@@ -44,15 +44,15 @@
       <section class="content-section" id="quiz-panel" aria-live="polite">
         <div class="section-heading"><div><span class="eyebrow">YOUR MOMENT</span><h2>Ready when you are.</h2></div><span class="quiet-note">Fastest correct answers lead the way.</span></div>
         <div class="quiz-shell" id="quiz-shell">
-          <div class="welcome-state"><div class="welcome-icon"><i data-lucide="timer"></i></div><h3>Make every second count.</h3><p>Enter your name, then take on ten questions across sport, science, health and a little office humor.</p><form id="participant-form"><label for="participant-name">Your name</label><div class="name-entry"><input id="participant-name" name="name" maxlength="24" autocomplete="name" placeholder="First name or nickname" required><button class="button button-dark" type="submit">Let's go <i data-lucide="arrow-right"></i></button></div></form><p class="privacy-note"><i data-lucide="lock-keyhole"></i> Scores are saved on this device.</p></div>
+          <div class="welcome-state"><div class="welcome-icon"><i data-lucide="badge-check"></i></div><h3>Join the challenge.</h3><p>Enter your name and UPS ID to participate.</p><form id="participant-form"><div class="participant-fields"><div><label for="participant-name">Your name</label><input id="participant-name" name="name" maxlength="50" autocomplete="name" placeholder="Enter your name" required></div><div><label for="participant-ups-id">UPS ID</label><input id="participant-ups-id" name="upsId" maxlength="64" placeholder="Enter your UPS ID" required></div></div><button class="button button-dark" type="submit">Continue <i data-lucide="arrow-right"></i></button></form><p class="privacy-note"><i data-lucide="lock-keyhole"></i> Your timer starts only after you press Start Quiz.</p></div>
         </div>
       </section>
     </section>
     <section class="view" id="leaderboard-view">
       <div class="page-heading"><span class="eyebrow">THE QUICK LIST</span><h1>Leaderboard<span class="title-period">.</span></h1><p>High scores, with speed as the tie-breaker.</p></div>
-      <div class="board-toolbar"><div class="board-tabs" role="tablist"><button class="board-tab active" data-board="recent">This device</button></div><button class="icon-button" id="clear-scores" title="Clear scores on this device" aria-label="Clear scores on this device"><i data-lucide="trash-2"></i></button></div>
-      <div class="board-table-wrap"><table class="board-table"><thead><tr><th>RANK</th><th>PLAYER</th><th>SCORE</th><th>TIME</th><th>PLAYED</th></tr></thead><tbody id="leaderboard-body"></tbody></table><div class="empty-board" id="empty-board"><i data-lucide="medal"></i><h3>First place is up for grabs.</h3><p>Play a round and your score will appear here.</p><button class="button button-blue" data-view="home">Play now <i data-lucide="arrow-right"></i></button></div></div>
-      <p class="board-note"><i data-lucide="info"></i> These results are stored in this browser only. A shared, cross-device leaderboard needs a connected database.</p>
+      <div class="board-toolbar"><div class="board-tabs"><span class="board-tab active">TOP 10</span></div><button class="icon-button" id="refresh-leaderboard" title="Refresh leaderboard" aria-label="Refresh leaderboard"><i data-lucide="refresh-cw"></i></button></div>
+      <div class="board-table-wrap"><table class="board-table"><thead><tr><th>RANK</th><th>NAME</th><th>UPS ID</th><th>SCORE</th><th>TOTAL TIME</th></tr></thead><tbody id="leaderboard-body"></tbody></table><div class="empty-board" id="empty-board"><i data-lucide="medal"></i><h3>First place is up for grabs.</h3><p>Be among the first to complete the challenge.</p><button class="button button-blue" data-view="home">Play now <i data-lucide="arrow-right"></i></button></div></div>
+      <p class="board-note" id="leaderboard-note"><i data-lucide="info"></i> Top ten scores across all participants. Higher score wins; fastest total time breaks ties. UPS IDs are masked.</p>
     </section>
     <section class="view" id="flyer-view">
       <div class="flyer-tools"><div><span class="eyebrow">READY TO SHARE</span><h1>Event flyer<span class="title-period">.</span></h1></div><button class="button button-dark" id="print-flyer"><i data-lucide="printer"></i> Print flyer</button></div>
