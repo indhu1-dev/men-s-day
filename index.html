@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101c2b">
+  <meta name="description" content="Think fast. Answer faster. Celebrate International Men's Day with the Fastest Finger Challenge.">
+  <title>Men's Day Fastest Finger Challenge</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js" defer></script>
+  <script src="app.js" type="module"></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#home" aria-label="Men's Day Challenge home"><span class="brand-mark"><i data-lucide="zap"></i></span><span>MEN'S DAY <b>2026</b></span></a>
+    <nav class="top-nav" aria-label="Main navigation">
+      <button class="nav-link active" data-view="home"><i data-lucide="play"></i><span>Play</span></button>
+      <button class="nav-link" data-view="leaderboard"><i data-lucide="trophy"></i><span>Leaderboard</span></button>
+      <button class="nav-link" data-view="flyer"><i data-lucide="qr-code"></i><span>Event flyer</span></button>
+    </nav>
+    <span class="edition"><span class="live-dot"></span> INTERNATIONAL MEN'S DAY</span>
+  </header>
+  <main>
+    <section class="view active" id="home-view">
+      <div class="hero">
+        <div class="hero-copy">
+          <span class="eyebrow"><span class="eyebrow-line"></span> THE QUICK-THINKING CHALLENGE</span>
+          <h1>Men's Day<br><span>Fastest Finger</span><br>Challenge<span class="title-period">.</span></h1>
+          <p class="hero-intro">Ten questions. One running clock. One quick mind at a time.</p>
+          <div class="hero-actions"><button class="button button-blue" id="start-button"><i data-lucide="play"></i> Start the challenge</button><button class="text-button" data-view="leaderboard">See the leaderboard <i data-lucide="arrow-up-right"></i></button></div>
+          <div class="quick-facts"><div><strong>10</strong><span>questions</span></div><div><strong>One clock</strong><span>for the full round</span></div><div><strong>100</strong><span>points to win</span></div></div>
+        </div>
+        <div class="hero-art" aria-label="Men's Day quiz illustration">
+          <div class="art-kicker">THINK FAST.<br>SHOW UP.</div>
+          <div class="art-sun"></div><div class="art-ring"></div><div class="art-numeral">10</div>
+          <div class="art-caption"><span>01 — 10</span><span>THE CLOCK IS ON</span></div>
+          <div class="art-stripe"></div><div class="art-dots"></div>
+        </div>
+      </div>
+      <div class="values-strip"><span>CELEBRATING</span><span>CHARACTER</span><span class="strip-dot"></span><span>COMMUNITY</span><span class="strip-dot"></span><span>WELLBEING</span><span class="strip-dot"></span><span>GOOD SPORT</span></div>
+      <section class="content-section" id="quiz-panel" aria-live="polite">
+        <div class="section-heading"><div><span class="eyebrow">YOUR MOMENT</span><h2>Ready when you are.</h2></div><span class="quiet-note">Fastest correct answers lead the way.</span></div>
+        <div class="quiz-shell" id="quiz-shell">
+          <div class="welcome-state"><div class="welcome-icon"><i data-lucide="timer"></i></div><h3>Make every second count.</h3><p>Enter your name, then take on ten questions across sport, science, health and a little office humor.</p><form id="participant-form"><label for="participant-name">Your name</label><div class="name-entry"><input id="participant-name" name="name" maxlength="24" autocomplete="name" placeholder="First name or nickname" required><button class="button button-dark" type="submit">Let's go <i data-lucide="arrow-right"></i></button></div></form><p class="privacy-note"><i data-lucide="lock-keyhole"></i> Scores are saved on this device.</p></div>
+        </div>
+      </section>
+    </section>
+    <section class="view" id="leaderboard-view">
+      <div class="page-heading"><span class="eyebrow">THE QUICK LIST</span><h1>Leaderboard<span class="title-period">.</span></h1><p>High scores, with speed as the tie-breaker.</p></div>
+      <div class="board-toolbar"><div class="board-tabs" role="tablist"><button class="board-tab active" data-board="recent">This device</button></div><button class="icon-button" id="clear-scores" title="Clear scores on this device" aria-label="Clear scores on this device"><i data-lucide="trash-2"></i></button></div>
+      <div class="board-table-wrap"><table class="board-table"><thead><tr><th>RANK</th><th>PLAYER</th><th>SCORE</th><th>TIME</th><th>PLAYED</th></tr></thead><tbody id="leaderboard-body"></tbody></table><div class="empty-board" id="empty-board"><i data-lucide="medal"></i><h3>First place is up for grabs.</h3><p>Play a round and your score will appear here.</p><button class="button button-blue" data-view="home">Play now <i data-lucide="arrow-right"></i></button></div></div>
+      <p class="board-note"><i data-lucide="info"></i> These results are stored in this browser only. A shared, cross-device leaderboard needs a connected database.</p>
+    </section>
+    <section class="view" id="flyer-view">
+      <div class="flyer-tools"><div><span class="eyebrow">READY TO SHARE</span><h1>Event flyer<span class="title-period">.</span></h1></div><button class="button button-dark" id="print-flyer"><i data-lucide="printer"></i> Print flyer</button></div>
+      <article class="flyer" id="flyer-card">
+        <div class="flyer-top"><div class="flyer-brand"><span class="brand-mark"><i data-lucide="zap"></i></span> INTERNATIONAL MEN'S DAY <b>2026</b></div><span class="flyer-edition">COMMUNITY EVENT / 01</span></div>
+        <div class="flyer-main"><div class="flyer-copy"><span class="eyebrow"><span class="eyebrow-line"></span> THINK FAST. ANSWER FASTER.</span><h2>Fastest Finger<br><span>First</span> Quiz Challenge</h2><p class="flyer-promise">Show what you know. Celebrate what we can do together.</p><div class="flyer-details"><div><i data-lucide="calendar-days"></i><span><small>DATE</small><strong id="flyer-date">November 19, 2026</strong></span></div><div><i data-lucide="clock-3"></i><span><small>TIME</small><strong>To be announced</strong></span></div><div><i data-lucide="globe-2"></i><span><small>MODE</small><strong>Online</strong></span></div></div><div class="flyer-url-label">YOUR QUIZ LINK</div><a id="quiz-url" class="flyer-url" href="#home">Publish to create your quiz link</a></div><div class="flyer-qr-box"><div class="flyer-qr-frame"><img id="qr-image" alt="QR code linking to this quiz" hidden><div class="qr-placeholder" id="qr-placeholder"><i data-lucide="qr-code"></i><span>Publish to<br>activate QR</span></div></div><strong>SCAN TO PARTICIPATE</strong><span>Point your camera here</span></div></div>
+        <div class="flyer-rule"><span><i data-lucide="sparkles"></i> 10 POINTS PER CORRECT ANSWER</span><span><i data-lucide="timer"></i> ONE RUNNING QUIZ TIMER</span><span><i data-lucide="trophy"></i> WINNER ANNOUNCED AFTER THE QUIZ</span></div>
+        <div class="flyer-footer"><span>GOOD LUCK. MAKE IT COUNT.</span><span>MEN'S DAY FASTEST FINGER CHALLENGE <b>·</b> 2026</span></div>
+      </article>
+      <p class="publish-note"><i data-lucide="circle-help"></i> GitHub Pages gives you a shareable URL after deployment. The flyer and QR code will then point to that URL automatically.</p>
+    </section>
+  </main>
+  <footer class="site-footer"><span>CELEBRATE WELL. PLAY FAIR. THINK FAST.</span><span>INTERNATIONAL MEN'S DAY <b>·</b> 2026</span></footer>
+</body>
+</html>
